@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+![Java CI with Gradle](https://github.com/cheese10yun/github-action/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master)
+
 # Github Action With Spring Boot & Gradle
 
 ## Github Action
@@ -19,8 +20,35 @@ Java With Gradle Action의 `Set up this workflow` 버튼을 클릭합니다.
 
 `Java With Gradle Action`의 YML을 생성합니다.
 
-=======
-# github-action
+### gradle.yml
 
-![Java CI with Gradle](https://github.com/cheese10yun/github-action/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master)
->>>>>>> 21a8c1dd19b5414752e098f52c9bab48416f5c3a
+```yml
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
+```
+
+`on.push`, `on.pull_request`을 보면 `master` branch에 `push`, `pull_request` 이벤트가 발생하는 경우 해당 `jobs`가 실행됩니다. `build`에서는 JDK 설정, Gradle 설정을 진행하고 최종적으로 `./gradlew build` 진행합니다.
+
+
+
