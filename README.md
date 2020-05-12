@@ -52,3 +52,19 @@ jobs:
 
 
 
+### Action Workflows
+
+![](images/github-action-3.png)
+
+`master`에 `push`, `pull_request` 이벤트가 발생할 경우 해당 Github Action이 동작하게 됩니다.
+
+![](images/github-action-4.png)
+
+Event를 클릭하면 상세 Github Actuon에 대한 내용을 살펴볼 수 있습니다.
+
+### Badge 
+
+![](images/github-action-5.png)
+
+
+오른쪽 상단에 `Create status badge` 버튼을 클릭해서 Badge를 Markdown Copy를 진행할 수 있습니다. ![Java CI with Gradle](https://github.com/cheese10yun/github-action/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master)
