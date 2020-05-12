@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Github Action With Spring Boot & Gradle
 
 ## Github Action
@@ -18,3 +19,8 @@ Java With Gradle Action의 `Set up this workflow` 버튼을 클릭합니다.
 
 `Java With Gradle Action`의 YML을 생성합니다.
 
+=======
+# github-action
+
+![Java CI with Gradle](https://github.com/cheese10yun/github-action/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master)
+>>>>>>> 21a8c1dd19b5414752e098f52c9bab48416f5c3a
