@@ -21,4 +21,4 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -x test
       - name: Simple Job Execute
-        run: java -jar -Dspring.batch.job.names=simpleJob ./build/libs/action-0.0.1-SNAPSHOT.jar
+        run: java -jar -Dspring.batch.job.names=simpleJob -Dspring.profiles.active=default ./build/libs/action-0.0.1-SNAPSHOT.jar
