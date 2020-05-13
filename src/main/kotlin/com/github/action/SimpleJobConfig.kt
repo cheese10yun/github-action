@@ -29,7 +29,7 @@ class SimpleJobConfig(
         return stepBuilderFactory.get("simpleStep1")
             .tasklet { _, _ ->
 
-                Unirest.post("https://hooks.slack.com/services/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")
+                Unirest.post("https://hooks.slack.com/services/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")
                     .header("Content-Type", "application/json")
                     .body("""
                         {
