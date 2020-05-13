@@ -19,14 +19,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew :batch:batch-company-save:bootJar
+        run: ./gradlew build -x test
       - name: Commpany Save Job Execute
-        run: java -jar -Dspring.profiles.active=test -Dspring.batch.job.names=companySaveJob ./batch/batch-company-save/build/libs/batch-company-save-0.0.1-SNAPSHOT.jar -marketType=KOSDAQ
-      - name: action-slack
-        uses: 8398a7/action-slack@v3.0.2
-        with:
-          status: ${{job.status}}
-          fields: repo,message,commit,author
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: java -jar -Dspring.batch.job.names=simpleJob ./build/libsaction-0.0.1-SNAPSHOT.jar
