@@ -1,0 +1,7 @@
+spring:
+  main:
+    web-application-type: NONE
+
+  batch:
+    job.names: ${job.name:NONE}
+    initialize-schema: always
